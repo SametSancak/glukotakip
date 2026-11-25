@@ -375,7 +375,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-800 p-4 md:p-8 print:bg-white print:p-0">
-      <CarbTracker/>
+      
       <div className="max-w-4xl mx-auto space-y-6">
         <header className="flex flex-wrap items-center justify-between gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100 print:shadow-none print:border-slate-300">
           <div className="flex items-center gap-3">
@@ -525,7 +525,7 @@ export default function App() {
             </div>
           )}
         </section>
-
+          <CarbTracker />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* İnsülin Hatırlatıcıları */}
           <section className="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 space-y-4 print:shadow-none print:border-slate-300">
