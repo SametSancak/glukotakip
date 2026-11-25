@@ -351,7 +351,7 @@ export default function CarbTracker() {
             {logs.map((log) => (
               <div
                 key={log.id}
-                className="inline-flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl border border-slate-200/80 text-xs max-w-full"
+                className="flex items-start gap-2 bg-white px-3 py-2 rounded-xl border border-slate-200/80 text-xs max-w-full"
               >
                 <span className="font-bold text-teal-700 shrink-0">
                   {log.carbs}g ({(Number(log.carbs) / 15).toFixed(1)} değ.)
@@ -359,14 +359,14 @@ export default function CarbTracker() {
                 <span className="font-semibold text-slate-800 shrink-0">
                   {MEAL_LABELS[log.meal_type] ?? log.meal_type}
                 </span>
-                <span className="text-slate-400 truncate max-w-[180px]" title={log.meal_name}>
+                <span className="text-slate-500 wrap-break-word">
                   {log.meal_name}
                 </span>
                 <button
                   type="button"
                   onClick={() => handleDeleteLog(log.id)}
                   title="Sil"
-                  className="text-slate-300 hover:text-rose-500 transition cursor-pointer ml-1 print:hidden"
+                  className="text-slate-300 hover:text-rose-500 transition cursor-pointer ml-1 shrink-0 print:hidden"
                 >
                   <X className="w-3.5 h-3.5" />
                 </button>
