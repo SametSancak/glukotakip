@@ -477,7 +477,7 @@ export default function App() {
             </p>
           ) : (
             <div className="w-full overflow-x-auto">
-              <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-52 min-w-[420px]">
+              <svg viewBox={`0 0 ${svgWidth} ${svgHeight}`} className="w-full h-52 min-w-105">
                 <defs>
                   <linearGradient id="glucoseFill" x1="0" y1="0" x2="0" y2="1">
                     <stop offset="0%" stopColor="#0d9488" stopOpacity="0.18" />
