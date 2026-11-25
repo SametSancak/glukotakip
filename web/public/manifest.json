@@ -1,0 +1,16 @@
+{
+  "name": "GlukoTakip",
+  "short_name": "GlukoTakip",
+  "description": "Kişisel kan şekeri, insülin ve karbonhidrat takip uygulaması",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0d9488",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

@@ -214,7 +214,7 @@ export default function CarbTracker() {
       <div className="grid grid-cols-1 lg:grid-cols-12">
         {/* Sol Sütun */}
         <div className="lg:col-span-7 p-5 border-b lg:border-b-0 lg:border-r border-slate-100 flex flex-col justify-between gap-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[290px] overflow-y-auto pr-1">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-72.5 overflow-y-auto pr-1">
             {filteredFoods.map((food) => (
               <button
                 key={food.id}
@@ -252,7 +252,7 @@ export default function CarbTracker() {
               placeholder="Özel besin (ör. 1 kase cacık)"
               value={customName}
               onChange={(e) => setCustomName(e.target.value)}
-              className="flex-1 min-w-[160px] px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
+              className="flex-1 min-w-40 px-3 py-2 text-xs bg-white border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500"
             />
             <input
               type="number"
@@ -291,9 +291,9 @@ export default function CarbTracker() {
               </select>
             </div>
 
-            <div className="min-h-[140px] max-h-[180px] overflow-y-auto space-y-2 pr-1">
+            <div className="min-h-35 max-h-45 overflow-y-auto space-y-2 pr-1">
               {cart.length === 0 ? (
-                <div className="h-[140px] flex items-center justify-center text-xs text-slate-400 text-center">
+                <div className="h-35 flex items-center justify-center text-xs text-slate-400 text-center">
                   Sepet boş. Soldaki listeden besin seçin.
                 </div>
               ) : (
@@ -406,7 +406,7 @@ export default function CarbTracker() {
                 <span className="font-semibold text-slate-800 shrink-0">
                   {MEAL_LABELS[log.meal_type] ?? log.meal_type}
                 </span>
-                <span className="text-slate-500 break-words">{log.meal_name}</span>
+                <span className="text-slate-500 wrap-break-word">{log.meal_name}</span>
                 <button
                   type="button"
                   onClick={() => handleDeleteLog(log.id)}
