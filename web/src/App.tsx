@@ -547,7 +547,7 @@ export default function App() {
                 onChange={(e) => setInsulinName(e.target.value)}
                 className="w-full px-3 py-2 text-sm bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
               />
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <input
                   type="time"
                   value={insulinTime}
@@ -606,7 +606,7 @@ export default function App() {
               <h2 className="font-semibold text-slate-800">Kan Şekeri Ölçümleri</h2>
             </div>
 
-            <form onSubmit={addGlucose} className="flex gap-2 print:hidden">
+            <form onSubmit={addGlucose} className="flex flex-wrap gap-2 print:hidden">
               <input
                 type="number"
                 placeholder="mg/dL (Örn: 115)"

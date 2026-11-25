@@ -1,1 +1,21 @@
 @import "tailwindcss";
+html,
+body {
+  overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* iOS Safari'de input/select'e dokununca otomatik zoom yapmasını engeller */
+@media screen and (max-width: 768px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* iPhone çentik (Dynamic Island) ve alt çubuk güvenli alanı */
+body {
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
